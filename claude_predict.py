@@ -2,20 +2,6 @@ class ClaudePredict:
     """
     A client for interacting with the Anthropic Claude API. Handles API authentication, generates prompts from Hackenburg et al. (2024) datasets to collect Claude predictions, and processes batch requests and responses. 
     """
-    
-    # Survey question 1 (see https://github.com/kobihackenburg/scaling-LLM-persuasion/blob/main/SI_Appendix.pdf)
-    SURVEY_QUESTIONS = {
-        'medicaid': "The U.S. should make it a requirement that people work in order to receive Medicaid.",
-        'veteran healthcare': "The U.S. should increase privatization of veterans' healthcare.",
-        'worker_pensions': "The U.S. should transition pension plans for public workers into privately managed accounts.",
-        'foreign_aid': "The U.S. should not decrease foreign aid spending.",
-        'solitary_confinement': "The U.S. should not ban the use of solitary confinement for juveniles in prison.",
-        'assisted_suicide': "The U.S. should allow terminally ill patients to end their lives via assisted suicide.",
-        'border_restrictions': "The U.S. should adopt more restrictions at the U.S. border.",
-        'felons_voting': "The U.S. should not deny convicted felons the right to vote.",
-        'affirmative_action': "The U.S. should not allow the use of affirmative action programs.",
-        'electoral_college': "The U.S. should abolish the electoral college.",
-    }
 
     def __init__(self, 
                  api_key: str, 
@@ -115,12 +101,14 @@ class ClaudePredict:
         return None
 
     def create_prompt(self, 
-                      row: pd.Series) -> str:
+                      row: pd.Series,
+                      survey_question_dict: Dict) -> str:
         """
         Create a formatted prompt from user data.
 
         Args:
             row: Pandas Series containing user data.
+            survey_question_dict: Dict where key is issue and item is question.
 
         Returns:
             Formatted prompt string.
@@ -135,7 +123,7 @@ class ClaudePredict:
             prompt.append(f"\nCONSIDER THE FOLLOWING:\n{row['treatment_message']}")
         
         #ask survey question relevant to given topic
-        prompt.append(f"\nSTATEMENT:\n{self.SURVEY_QUESTIONS[row['issue']]}")
+        prompt.append(f"\nSTATEMENT:\n{survey_question_dict[row['issue']]}")
         prompt.append("\nPlease respond ONLY with a number from 0 to 100, where:"
                      "\n0 = strongly disagree\n100 = strongly agree")
         
