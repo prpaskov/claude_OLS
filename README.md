@@ -36,7 +36,7 @@ The U.S. should abolish the electoral college.
 
 Please respond ONLY with a number from 0 to 100, where:
 0 = strongly disagree
-100 = strongly agree
+100 = strongly agree. 
 It is important that you respond ONLY with a number from 0 to 100"
 
   ### System prompt
