@@ -1,3 +1,8 @@
+from typing import Dict, List, Optional
+import time
+import pandas as pd
+import requests
+
 class ClaudePredict:
     """
     A client for interacting with the Anthropic Claude API. Handles API authentication, generates prompts from Hackenburg et al. (2024) datasets to collect Claude predictions, and processes batch requests and responses. 
