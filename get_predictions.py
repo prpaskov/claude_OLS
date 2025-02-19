@@ -1,5 +1,6 @@
 # Initialize Claude API
-claude = ClaudeAPI()
+from claude_predict import ClaudePredict
+claude = ClaudePredict()
 
  # Set survey questions, using only survey question 1 (of 4) from https://github.com/kobihackenburg/scaling-LLM-persuasion/blob/main/SI_Appendix.pdf
 SURVEY_QUESTIONS = {
