@@ -9,7 +9,7 @@ I use the Anthropic API and [Hackenburg et al. (2024)](https://github.com/kobiha
 - asks Claude to predict the degree to which a user would agree with a statement posed the human subject on Prolific. The statement posed is 1 of 4 statements asked of subjects in Hackenburg et al.
 2. Collects Claude predictions (0-100) and saves to a new dataset.
 
-300 responses are collected. Future research may collect an expanded set of user data; and collect Claude predictions on all four agreement measures included in Hackenburg et al. This repository is a quick pilot and is not perfectly self-contained.
+300 responses are collected. Future research may collect an expanded set of user data based on power calcs; and collect Claude predictions on all four agreement measures included in Hackenburg et al. This repository is a quick pilot and is not perfectly self-contained.
 
 ## Prompts
 
