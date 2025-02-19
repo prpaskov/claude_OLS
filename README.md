@@ -13,6 +13,10 @@ I use the Anthropic API and [Hackenburg et al. (2024)](https://github.com/kobiha
 
 ## Prompts
 
+### System prompt
+
+"You are role playing an individual in the U.S. based on the demographics provided to you."
+
 ### User prompt example
 
 "USER PROFILE:
@@ -39,7 +43,4 @@ Please respond ONLY with a number from 0 to 100, where:
 100 = strongly agree. 
 It is important that you respond ONLY with a number from 0 to 100"
 
-  ### System prompt
-
-"You are role playing an individual in the U.S. based on the demographics provided to you."
 
