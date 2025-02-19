@@ -47,4 +47,5 @@ for idx, row in df_sample.iterrows():
 # Save identifiers and predictions to new dataset
 output_df = df[['prolific_id', 'ResponseId', 'claude_prompt', 'claude_preds']]
 output_df['prolific_id'] = output_df['prolific_id'].apply(str)
+output_df = output_df[~output_df['claude_preds'].isna()]
 output_df.to_csv('df_claude_preds.csv', index=False)
