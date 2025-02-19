@@ -43,4 +43,8 @@ Please respond ONLY with a number from 0 to 100, where:
 100 = strongly agree. 
 It is important that you respond ONLY with a number from 0 to 100"
 
+## Analysis
 
+Contact prp for analysis code and methodology.
+
+<img width="738" alt="Screenshot 2025-02-19 at 1 03 18 PM" src="https://github.com/user-attachments/assets/7ca448de-0dec-4a46-b383-bd4e881cdb49" />
