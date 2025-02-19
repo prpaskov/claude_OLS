@@ -1,3 +1,7 @@
+import time
+import pandas as pd
+import requests
+
 # Initialize Claude API
 from claude_predict import ClaudePredict
 claude = ClaudePredict()
