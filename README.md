@@ -1,17 +1,19 @@
 # Claude_OLS
-February 2024
 
 ## Overview
 I use the Anthropic API and [Hackenburg et al. (2024)](https://github.com/kobihackenburg/scaling-LLM-persuasion.git) data to:
 
-1. Create a prompt that includes 1) a user profile based on the same information used in the first-stage OLS in Hackenburg et al. (2024), 2) provide Claude with the treatment message provided in Hackenburg et al. (or no message at all in the case of the control) and 3) asks Claude to predict the degree to which a user would agree with a statement posed the human subject on Prolific. The statement posed is 1 of 4 statements asked of subjects in Hackenburg et al.
+1. Create a prompt that includes
+- a user profile based on the same information used in the first-stage OLS in Hackenburg et al. (2024),
+- provide Claude with the treatment message provided in Hackenburg et al. (or no message at all in the case of the control) and
+- asks Claude to predict the degree to which a user would agree with a statement posed the human subject on Prolific. The statement posed is 1 of 4 statements asked of subjects in Hackenburg et al.
 2. Collects Claude predictions (0-100) and saves to a new dataset.
 
 300 responses are collected. Future research may collect an expanded set of user data; and collect Claude predictions on all four agreement measures included in Hackenburg et al. This repository is a quick pilot and is not perfectly self-contained.
 
-## Prompt
+## Prompts
 
-### User prompt examples
+### User prompt example
 
 "USER PROFILE:
   - Political knowledge: 1, where 0 is low and 3 is high
