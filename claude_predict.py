@@ -130,6 +130,6 @@ class ClaudePredict:
         #ask survey question relevant to given topic
         prompt.append(f"\nSTATEMENT:\n{survey_question_dict[row['issue']]}")
         prompt.append("\nPlease respond ONLY with a number from 0 to 100, where:"
-                     "\n0 = strongly disagree\n100 = strongly agree")
+                     "\n0 = strongly disagree\n100 = strongly agree. It is important that you respond ONLY with a number from 0 to 100.")
         
         return "\n".join(prompt)
